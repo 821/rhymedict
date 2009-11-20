@@ -60,6 +60,7 @@ var seek={
 			[get(kuankhiunn,'id',v)]:findAll(kuankhiunn,'glyph',v);
 			
 		var entryview=$('#entryview').empty();
+		if(!ents)return;
 		for(var i=0;i<ents.length;i++){
 			var ym=getDziohymBy('id',ents[i].id.split('.')[0],true);
 			//*debug*/console.log(ym);
@@ -74,6 +75,7 @@ var seek={
 	cet:function(v){
 		var sounds=(parseInt(v)==v && v>0 && v<dziohym.id.length)?
 			[getDziohymBy('id',v,true)]:getDziohymBy('cet',v,true);
+		if(!sounds)return;
 		var entryview=$("#entryview").empty();
 		for(var i=0;i<sounds.length;i++){
 			entryview.append(represent.ymheader(sounds[i]))
@@ -259,9 +261,17 @@ var represent={
 
 /**--dispatcher--**/
 function allCommands(hash){
-	if(hash.match(/seek\..*\(.*\)/))
-		eval(hash);
-	
+	var m=hash.match(/seek\.(.+)\((.+)\)/);
+	if(m && seek[m[1]]){
+		if(m[2].indexOf(','))//TODO:multi params
+			try{
+				eval(hash);
+			}catch(e){
+				return;//TODO;
+			}
+		else
+			seek[m[1]][m[2]];
+	}
 }
 //----hash command maker---
 function issueCommand(){
