@@ -15,6 +15,7 @@
 ==資料來源==
   * [http://www.pkucn.com/viewthread.php?tid=175767&extra=&page=2 「廣韻全字表」]（Polyhedron，Zgheng，有女同車整理）
   * [http://kanji-database.sourceforge.net/dict/sbgy/index.html 宋本廣韻データ]
+  * [http://benzo0120.es.land.to/QYT/INDEX.HTM 「電網韻図（QYT）」]（伊藤祥司）
   * 《廣韻校本》（周祖謨）
   * 《切韻音系》（李榮）
   * 《切韻研究》（邵榮芬）
