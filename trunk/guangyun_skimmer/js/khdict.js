@@ -4,21 +4,22 @@
 /**=======DATA=======***/
 //Reduplicate pvaancets and alternatives
 doubleCets={
-"丘弭":["1241,1248"],
-"之少":["1678,2769"],
-"古伯":["3618,3621"],
-"古賣":["2453,2491"],
-"士免":["1653,1663"],
-"居乙":["3320,3352"],
-"烏浪":["2928,2945"],
-"芳万":["2601,2607"],
-"苦蓋":["2446,2534"],
-"語偃":["1521,2609"],
+"丘弭":["1241","1248"],
+"之少":["1678","2769"],
+"古伯":["3618","3621"],
+"古賣":["2453","2491"],
+"士免":["1653","1663"],
+"居乙":["3320","3352"],
+"烏浪":["2928","2945"],
+"芳万":["2601","2607"],
+"苦蓋":["2446","2534"],
+"語偃":["1521","2609"],
 }
 
 
-altCets=["去弭","之笑","古陌","古邁","居乞","阿浪","叉萬","苦愛","語堰"];
-altCets_idx=["1241","2769","3618","2491","3352","2928","2607","2534","2609"];
+altCets={
+	"去弭":"1241","之笑":"2769","古陌":"3618","古邁":"2491","居乞":"3352",
+	"阿浪":"2928","叉萬":"2607","苦愛":"2534","語堰":"2609"};
 
 //Syllable structure code pattern
 struct_pattern=/(\d{2})?([co])([1-7])([a-z])([1-4])/;
@@ -103,6 +104,7 @@ function findRange(from,by,test,fields){
 
 //get syllables info by sievhiunn id or fanqie or index
 function getDziohymBy(what, value, withapi){
+	if(value==null)return null;
 	var res;
 	if(what==='id')
 		res=get(dziohym,'id',parseInt(value)-1);
@@ -110,21 +112,20 @@ function getDziohymBy(what, value, withapi){
 		res=get(dziohym,'id',value);	
 	else if(what==='cet'){
 		//reduplicate cets
-		var test=doubleCets[value]
+		var test=doubleCets[value];
 		if(test){
-			res.push(getDziohymBy('id',test[0]));
-			res.push(getDziohymBy('id',test[1]));
+			res=[];
+			res.push(getDziohymBy('id',test[0],withapi));
+			res.push(getDziohymBy('id',test[1],withapi));
 			return res;
 		}
 		// alternative cets
-		if(value in altCets){
-			var idx=0;
-			for(;idx<altCets.length;idx++)
-				if(altCets[idx]===value)break;
-			return [getDziohymBy('id',altCets_idx[idx])];
+		if(test=null,test=altCets[value]){
+			return [getDziohymBy('id',test,withapi)];
 		}
 		// normal cets
-		return [getDziohymBy('idx',find(dziohym,'cet',value,[]).idx)];		
+		var getIt=find(dziohym,'cet',value,[]);
+		return getIt?[getDziohymBy('idx',getIt.idx,withapi)]:null;		
 	}
 
 	return $.extend(res,getSylInfo(parseSylCode(res.struct),withapi));
@@ -155,7 +156,7 @@ var kwennmiuk=['卷一上平聲',"卷二下平聲","卷三上聲","卷四去聲"
 function getMiukInfo(code){
 	//*debug*/console.log(code);
 	return{	kwenn:kwennmiuk[code.charAt(0)-1],
-		miuk:parseInt(code.substr(2,2)),
+		miuk:parseInt(code.substr(2,2),10),
 		hiunn:code.substr(4)
 	};
 }
