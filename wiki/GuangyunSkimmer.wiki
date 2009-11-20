@@ -29,3 +29,4 @@
 == 作者 ==
 有女同車
 == 反饋 ==
+You can report bugs [http://code.google.com/p/rhymedict/issues/list Here]
