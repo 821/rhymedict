@@ -64,10 +64,16 @@ jQuery.extend({
 	
 	historyCheck: function(){
 		if (jQuery.historyNeedIframe) {
+			var current_hash=location.hash.replace(/\?.*$/, '');
+			if(current_hash != jQuery.historyCurrentHash){
+				// IE, normal link check
+				jQuery.historyLoad(current_hash.replace(/^#/,''));
+				return;
+			}
 			// On IE, check for location.hash of iframe
 			var ihistory = jQuery("#jQuery_history")[0];
 			var iframe = ihistory.contentDocument || ihistory.contentWindow.document;
-			var current_hash = iframe.location.hash.replace(/\?.*$/, '');
+			current_hash = iframe.location.hash.replace(/\?.*$/, '');
 			if(current_hash != jQuery.historyCurrentHash) {
 			
 				location.hash = current_hash;

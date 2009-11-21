@@ -13,7 +13,7 @@ doubleCets={
 "烏浪":["2928","2945"],
 "芳万":["2601","2607"],
 "苦蓋":["2446","2534"],
-"語偃":["1521","2609"],
+"語偃":["1521","2609"]
 }
 
 
@@ -32,7 +32,7 @@ function getSjep(code){return sjeps.charAt(parseInt(code,36)-10);}
 //generate a object-record from given table,fields
 function genRec(res,tbl,fields,idx){
 	//array-like
-	if(fields.length)
+	if(fields.length!==undefined)
 		for(var i=0;i<fields.length;i++)
 			res[fields[i]]=tbl[fields[i]][idx];
 	//object-like
@@ -47,13 +47,14 @@ function genRec(res,tbl,fields,idx){
 function find(from,by,v,fields){
 	var idx;
 	//firefox 3.5
-	if(Array.indexOf)
+	if(Array.indexOf){	//I've forgotten the {},got a HUGE TROUBLE@_@
 	  if((idx=from[by].indexOf(v))<0)return null;
-	else{
+	}else{
+//		/*debug*/alert("i'm not ff");
 		for(var i=0;i<from[by].length;i++)
 			if(from[by][i]==v){
 				idx=i;
-				break
+				break;
 			}
 	}
 	if(idx===undefined)return null;
@@ -120,11 +121,13 @@ function getDziohymBy(what, value, withapi){
 			return res;
 		}
 		// alternative cets
-		if(test=null,test=altCets[value]){
+		test=altCets[value];
+		if(test){
 			return [getDziohymBy('id',test,withapi)];
 		}
 		// normal cets
 		var getIt=find(dziohym,'cet',value,[]);
+//		/*debug*/alert(getIt.idx);
 		return getIt?[getDziohymBy('idx',getIt.idx,withapi)]:null;		
 	}
 
@@ -141,7 +144,7 @@ function parseSylCode(code,finalonly){
 			sjeng:m[1],
 			xu:m[2],
 			tonk:parseInt(m[3]),
-			hey:m[4],
+			hey:m[4]
 		};
 	if(finalonly)
 		res.civk=m[5];
@@ -175,7 +178,7 @@ function getSylInfo(code,withipa){
 		//聲紐＆聲IPA
 		var sjenginfo=find(sjeng,'code',code.sjeng);
 		if(!sjenginfo)return null;
-		var res={sjenginfo:sjenginfo,niov:sjenginfo.niov}
+		res={sjenginfo:sjenginfo,niov:sjenginfo.niov};
 		//韻IPA
 		res.hiunninfo=find(hiunn,'code',hcode1+code.civk,
 					['dienq','phuan','hvang','liio',
@@ -189,7 +192,7 @@ function getSylInfo(code,withipa){
 	//呼、等、調、攝
 	res.xu= code.xu=='c'?'開':'合';
 	res.tonk=['一','二',
-		'三子','三丑','三寅A','三寅B','四'][code.tonk-1]
+		'三子','三丑','三寅A','三寅B','四'][code.tonk-1];
 	res.dew='平上去入'.substr(code.dew-1,1);
 	res.sjep=getSjep(code.hey);
 
