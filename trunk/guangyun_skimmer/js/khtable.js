@@ -27,7 +27,7 @@ function initRow(){
 	return [[,,,,],[,,,,,],[,,,,],[,,,,,],[,,,,,],[,,,,,,],[,,,,],[,,,,,]];
 }
 function getSjengHeader(){
-	return "<tr><th></th><th>" + sjeng.niov.join("</th><th>")+"</th></tr>"
+	return "<tr><th></th><th>" + sjeng.niov.join("</th><th>")+"</th></tr>";
 }
 function rhymeTable(sjep){
 	var res=$("<table class='rhyme_table'></table>").append(getSjengHeader());
@@ -36,7 +36,7 @@ function rhymeTable(sjep){
 	if(!thru)return;
 	for(var i=0;i<thru.length;i++){
 		var r=initRow();
-		var yms=findRange(dziohym,'struct',function(c){return c.substr(2)==thru[i]});
+		var yms=findRange(dziohym,'struct',function(c){return c.substr(2)==thru[i];});
 		var n=0;
 		var ym=yms[n]; 
 		var id=ym.id+'.1';
@@ -51,12 +51,12 @@ function rhymeTable(sjep){
 					"<a class='dzioh' id='dzioh" +
 					ym.id + "' title='"+ ym.cet +
 					// use link as a event trigger
-					"切' href='#seek.cet("+ym.id+")'>"+
+					"切' href='javascript:cmd(\"cet\","+ym.id+")'>"+
 					kuankhiunn.glyph[j] + "</a>" +
-					"<a class='fanqie' href='#seek.cet(\""+
+					"<a class='fanqie' href='javascript:cmd(\"cet\",\""+
 				       	ym.cet+"\")'>"+ ym.cet + "</a>";
 				//move to next cell
-				if(++n>=yms.length)break
+				if(++n>=yms.length)break;
 				else{
 					ym=yms[n];
 					id=ym.id+'.1';

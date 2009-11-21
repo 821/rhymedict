@@ -1,5 +1,6 @@
 <html>
-<head>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 	<title>廣韻檢索_js_v0.1</title>
 <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
@@ -33,30 +34,30 @@ html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
 <div id="menu" class="jqueryslidemenu">
 <ul>
 <li><a href="cethiunn_szivv.html">切韻序</a></li>
-<li><a href="#seek.showId('miuktable')">韻目</a></li>
-<li><a href="#seek.showId('sjengtable')">聲母表</a></li>
-<li><a href="#seek.showId('hiunntable')">韻母表</a></li>
+<li><a href="javascript:cmd('showId','miuktable')">韻目</a></li>
+<li><a href="javascript:cmd('showId','sjengtable')">聲母表</a></li>
+<li><a href="javascript:cmd('showId','hiunntable')">韻母表</a></li>
 <li><a href="javascript:void(0)">字音表</a>
 	<ul>
-		<li><a href="#seek.table('通')">通攝</a></li>
-		<li><a href="#seek.table('江')">江攝</a></li>
-		<li><a href="#seek.table('止')">止攝</a></li>
-		<li><a href="#seek.table('遇')">遇攝</a></li>
-		<li><a href="#seek.table('蟹')">蟹攝</a></li>
-		<li><a href="#seek.table('臻')">臻攝</a></li>
-		<li><a href="#seek.table('山')">山攝</a></li>
-		<li><a href="#seek.table('效')">效攝</a></li>
-		<li><a href="#seek.table('果')">果攝</a></li>
-		<li><a href="#seek.table('假')">假攝</a></li>
-		<li><a href="#seek.table('宕')">宕攝</a></li>
-		<li><a href="#seek.table('梗')">梗攝</a></li>
-		<li><a href="#seek.table('曾')">曾攝</a></li>
-		<li><a href="#seek.table('流')">流攝</a></li>
-		<li><a href="#seek.table('深')">深攝</a></li>
-		<li><a href="#seek.table('咸')">咸攝</a></li>
+		<li><a href="javascript:cmd('table','通')">通攝</a></li>
+		<li><a href="javascript:cmd('table','江')">江攝</a></li>
+		<li><a href="javascript:cmd('table','止')">止攝</a></li>
+		<li><a href="javascript:cmd('table','遇')">遇攝</a></li>
+		<li><a href="javascript:cmd('table','蟹')">蟹攝</a></li>
+		<li><a href="javascript:cmd('table','臻')">臻攝</a></li>
+		<li><a href="javascript:cmd('table','山')">山攝</a></li>
+		<li><a href="javascript:cmd('table','效')">效攝</a></li>
+		<li><a href="javascript:cmd('table','果')">果攝</a></li>
+		<li><a href="javascript:cmd('table','假')">假攝</a></li>
+		<li><a href="javascript:cmd('table','宕')">宕攝</a></li>
+		<li><a href="javascript:cmd('table','梗')">梗攝</a></li>
+		<li><a href="javascript:cmd('table','曾')">曾攝</a></li>
+		<li><a href="javascript:cmd('table','流')">流攝</a></li>
+		<li><a href="javascript:cmd('table','深')">深攝</a></li>
+		<li><a href="javascript:cmd('table','咸')">咸攝</a></li>
 	</ul>
 </li>
-<li><a href="#seek.clearHilight()">清除高亮</a></li>
+<li><a href="javascript:cmd('clearHilight')">清除高亮</a></li>
 <li><a href="help.html">〔幫助〕</a></li>
 </ul>
 <br style="clear: left" />
@@ -592,68 +593,68 @@ html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
 <table style="display:none" id="miuktable" class="struct">
 <tbody>
 <tr><th>上平聲</th><th>上聲</th><th>去聲</th><th>入聲</th></tr>
-<tr><td><a href="#seek.hiunn('東')">東</a>第一<small>(獨用)</small></td><td><a href="#seek.hiunn('董')">董</a>第一<small>(獨用)</small></td><td><a href="#seek.hiunn('送')">送</a>第一<small>(獨用)</small></td><td><a href="#seek.hiunn('屋')">屋</a>第一<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('冬')">冬</a>第二<small>(鍾同用)</small></td><td>○</td><td><a href="#seek.hiunn('宋')">宋</a>第二<small>(用同用)</small></td><td><a href="#seek.hiunn('沃')">沃</a>第二<small>(燭同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('鍾')">鍾</a>第三</td><td><a href="#seek.hiunn('腫')">腫</a>第二<small>(獨用)</small></td><td><a href="#seek.hiunn('用')">用</a>第三</td><td><a href="#seek.hiunn('燭')">燭</a>第三</td></tr>
-<tr><td><a href="#seek.hiunn('江')">江</a>第四<small>(獨用)</small></td><td><a href="#seek.hiunn('講')">講</a>第三<small>(獨用)</small></td><td><a href="#seek.hiunn('絳')">絳</a>第四<small>(獨用)</small></td><td><a href="#seek.hiunn('覺')">覺</a>第四<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('支')">支</a>第五<small>(脂之同用)</small></td><td><a href="#seek.hiunn('紙')">紙</a>第四<small>(旨止同用)</small></td><td><a href="#seek.hiunn('寘')">寘</a>第五<small>(至志同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('脂')">脂</a>第六</td><td><a href="#seek.hiunn('旨')">旨</a>第五</td><td><a href="#seek.hiunn('至')">至</a>第六</td><td/></tr>
-<tr><td><a href="#seek.hiunn('之')">之</a>第七</td><td><a href="#seek.hiunn('止')">止</a>第六</td><td><a href="#seek.hiunn('志')">志</a>第七</td><td/></tr>
-<tr><td><a href="#seek.hiunn('微')">微</a>第八<small>(獨用)</small></td><td><a href="#seek.hiunn('尾')">尾</a>第七<small>(獨用)</small></td><td><a href="#seek.hiunn('未')">未</a>第八<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('魚')">魚</a>第九<small>(獨用)</small></td><td><a href="#seek.hiunn('語')">語</a>第八<small>(獨用)</small></td><td><a href="#seek.hiunn('御')">御</a>第九<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('虞')">虞</a>第十<small>(模同用)</small></td><td><a href="#seek.hiunn('麌')">麌</a>第九<small>(姥同用)</small></td><td><a href="#seek.hiunn('遇')">遇</a>第十<small>(暮同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('模')">模</a>第十一</td><td><a href="#seek.hiunn('姥')">姥</a>第十</td><td><a href="#seek.hiunn('暮')">暮</a>第十一</td><td/></tr>
-<tr><td><a href="#seek.hiunn('齊')">齊</a>第十二<small>(獨用)</small></td><td><a href="#seek.hiunn('薺')">薺</a>第十一<small>(獨用)</small></td><td><a href="#seek.hiunn('霽')">霽</a>第十二<small>(祭同用)</small></td><td/></tr>
-<tr><td>○</td><td>○</td><td><a href="#seek.hiunn('祭')">祭</a>第十三</td><td/></tr>
-<tr><td>○</td><td>○</td><td><a href="#seek.hiunn('泰')">泰</a>第十四<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('佳')">佳</a>第十三<small>(皆同用)</small></td><td><a href="#seek.hiunn('蟹')">蟹</a>第十二<small>(駭同用)</small></td><td><a href="#seek.hiunn('卦')">卦</a>第十五<small>(怪夬同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('皆')">皆</a>第十四</td><td><a href="#seek.hiunn('駭')">駭</a>第十三</td><td><a href="#seek.hiunn('怪')">怪</a>第十六</td><td/></tr>
-<tr><td>○</td><td>○</td><td><a href="#seek.hiunn('夬')">夬</a>第十七</td><td/></tr>
-<tr><td><a href="#seek.hiunn('灰')">灰</a>第十五<small>(咍同用)</small></td><td><a href="#seek.hiunn('賄')">賄</a>第十四<small>(海同用)</small></td><td><a href="#seek.hiunn('隊')">隊</a>第十八<small>(代同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('咍')">咍</a>第十六</td><td><a href="#seek.hiunn('海')">海</a>第十五</td><td><a href="#seek.hiunn('代')">代</a>第十九</td><td/></tr>
-<tr><td>○</td><td>○</td><td><a href="#seek.hiunn('廢')">廢</a>第二十<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('眞')">眞</a>第十七<small>(諄臻同用)</small></td><td><a href="#seek.hiunn('軫')">軫</a>第十六<small>(準同用)</small></td><td><a href="#seek.hiunn('震')">震</a>第二十一<small>(稕同用)</small></td><td><a href="#seek.hiunn('質')">質</a>第五<small>(術櫛同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('諄')">諄</a>第十八</td><td><a href="#seek.hiunn('準')">準</a>第十七</td><td><a href="#seek.hiunn('稕')">稕</a>第二十二</td><td><a href="#seek.hiunn('術')">術</a>第六</td></tr>
-<tr><td><a href="#seek.hiunn('臻')">臻</a>第十九</td><td>○</td><td>○</td><td><a href="#seek.hiunn('櫛')">櫛</a>第七</td></tr>
-<tr><td><a href="#seek.hiunn('文')">文</a>第二十<small>(欣同用：非)</small></td><td><a href="#seek.hiunn('吻')">吻</a>第十八<small>(隱同用)</small></td><td><a href="#seek.hiunn('問')">問</a>第二十三<small>(獨用)</small></td><td><a href="#seek.hiunn('物')">物</a>第八<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('欣')">欣</a>第二十一<small>(獨用)</small></td><td><a href="#seek.hiunn('隱')">隱</a>第十九</td><td><a href="#seek.hiunn('焮')">焮</a>第二十四<small>(獨用)</small></td><td><a href="#seek.hiunn('迄')">迄</a>第九<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('元')">元</a>第二十二<small>(魂痕同用)</small></td><td><a href="#seek.hiunn('阮')">阮</a>第二十<small>(混很同用)</small></td><td><a href="#seek.hiunn('願')">願</a>第二十五<small>(慁恨同用)</small></td><td><a href="#seek.hiunn('月')">月</a>第十<small>(沒同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('魂')">魂</a>第二十三</td><td><a href="#seek.hiunn('混')">混</a>第二十一</td><td><a href="#seek.hiunn('慁')">慁</a>第二十六</td><td><a href="#seek.hiunn('沒')">沒</a>第十一</td></tr>
-<tr><td><a href="#seek.hiunn('痕')">痕</a>第二十四</td><td><a href="#seek.hiunn('很')">很</a>第二十二</td><td><a href="#seek.hiunn('恨')">恨</a>第二十七</td><td><small>(麧字見沒韻)</small></td></tr>
-<tr><td><a href="#seek.hiunn('寒')">寒</a>第二十五<small>(寒同用)</small></td><td><a href="#seek.hiunn('旱')">旱</a>第二十三<small>(緩同用)</small></td><td><a href="#seek.hiunn('翰')">翰</a>第二十八<small>(換同用)</small></td><td><a href="#seek.hiunn('曷')">曷</a>第十二<small>(末同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('桓')">桓</a>第二十六</td><td><a href="#seek.hiunn('緩')">緩</a>第二十四</td><td><a href="#seek.hiunn('換')">換</a>第二十九</td><td><a href="#seek.hiunn('末')">末</a>第十三</td></tr>
-<tr><td><a href="#seek.hiunn('刪')">刪</a>第二十七<small>(山同用)</small></td><td><a href="#seek.hiunn('潸')">潸</a>第二十五<small>(産同用)</small></td><td><a href="#seek.hiunn('諫')">諫</a>第三十<small>(襉同用)</small></td><td><a href="#seek.hiunn('鎋')">鎋</a>第十五</td></tr>
-<tr><td><a href="#seek.hiunn('山')">山</a>第二十八</td><td><a href="#seek.hiunn('産')">産</a>第二十六</td><td><a href="#seek.hiunn('襉')">襉</a>第三十一</td><td><a href="#seek.hiunn('黠')">黠</a>第十四<small>(鎋同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','東')">東</a>第一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','董')">董</a>第一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','送')">送</a>第一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','屋')">屋</a>第一<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','冬')">冬</a>第二<small>(鍾同用)</small></td><td>○</td><td><a href="javascript:cmd('hiunn','宋')">宋</a>第二<small>(用同用)</small></td><td><a href="javascript:cmd('hiunn','沃')">沃</a>第二<small>(燭同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','鍾')">鍾</a>第三</td><td><a href="javascript:cmd('hiunn','腫')">腫</a>第二<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','用')">用</a>第三</td><td><a href="javascript:cmd('hiunn','燭')">燭</a>第三</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','江')">江</a>第四<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','講')">講</a>第三<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','絳')">絳</a>第四<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','覺')">覺</a>第四<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','支')">支</a>第五<small>(脂之同用)</small></td><td><a href="javascript:cmd('hiunn','紙')">紙</a>第四<small>(旨止同用)</small></td><td><a href="javascript:cmd('hiunn','寘')">寘</a>第五<small>(至志同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','脂')">脂</a>第六</td><td><a href="javascript:cmd('hiunn','旨')">旨</a>第五</td><td><a href="javascript:cmd('hiunn','至')">至</a>第六</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','之')">之</a>第七</td><td><a href="javascript:cmd('hiunn','止')">止</a>第六</td><td><a href="javascript:cmd('hiunn','志')">志</a>第七</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','微')">微</a>第八<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','尾')">尾</a>第七<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','未')">未</a>第八<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','魚')">魚</a>第九<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','語')">語</a>第八<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','御')">御</a>第九<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','虞')">虞</a>第十<small>(模同用)</small></td><td><a href="javascript:cmd('hiunn','麌')">麌</a>第九<small>(姥同用)</small></td><td><a href="javascript:cmd('hiunn','遇')">遇</a>第十<small>(暮同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','模')">模</a>第十一</td><td><a href="javascript:cmd('hiunn','姥')">姥</a>第十</td><td><a href="javascript:cmd('hiunn','暮')">暮</a>第十一</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','齊')">齊</a>第十二<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','薺')">薺</a>第十一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','霽')">霽</a>第十二<small>(祭同用)</small></td><td/></tr>
+<tr><td>○</td><td>○</td><td><a href="javascript:cmd('hiunn','祭')">祭</a>第十三</td><td/></tr>
+<tr><td>○</td><td>○</td><td><a href="javascript:cmd('hiunn','泰')">泰</a>第十四<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','佳')">佳</a>第十三<small>(皆同用)</small></td><td><a href="javascript:cmd('hiunn','蟹')">蟹</a>第十二<small>(駭同用)</small></td><td><a href="javascript:cmd('hiunn','卦')">卦</a>第十五<small>(怪夬同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','皆')">皆</a>第十四</td><td><a href="javascript:cmd('hiunn','駭')">駭</a>第十三</td><td><a href="javascript:cmd('hiunn','怪')">怪</a>第十六</td><td/></tr>
+<tr><td>○</td><td>○</td><td><a href="javascript:cmd('hiunn','夬')">夬</a>第十七</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','灰')">灰</a>第十五<small>(咍同用)</small></td><td><a href="javascript:cmd('hiunn','賄')">賄</a>第十四<small>(海同用)</small></td><td><a href="javascript:cmd('hiunn','隊')">隊</a>第十八<small>(代同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','咍')">咍</a>第十六</td><td><a href="javascript:cmd('hiunn','海')">海</a>第十五</td><td><a href="javascript:cmd('hiunn','代')">代</a>第十九</td><td/></tr>
+<tr><td>○</td><td>○</td><td><a href="javascript:cmd('hiunn','廢')">廢</a>第二十<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','眞')">眞</a>第十七<small>(諄臻同用)</small></td><td><a href="javascript:cmd('hiunn','軫')">軫</a>第十六<small>(準同用)</small></td><td><a href="javascript:cmd('hiunn','震')">震</a>第二十一<small>(稕同用)</small></td><td><a href="javascript:cmd('hiunn','質')">質</a>第五<small>(術櫛同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','諄')">諄</a>第十八</td><td><a href="javascript:cmd('hiunn','準')">準</a>第十七</td><td><a href="javascript:cmd('hiunn','稕')">稕</a>第二十二</td><td><a href="javascript:cmd('hiunn','術')">術</a>第六</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','臻')">臻</a>第十九</td><td>○</td><td>○</td><td><a href="javascript:cmd('hiunn','櫛')">櫛</a>第七</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','文')">文</a>第二十<small>(欣同用：非)</small></td><td><a href="javascript:cmd('hiunn','吻')">吻</a>第十八<small>(隱同用)</small></td><td><a href="javascript:cmd('hiunn','問')">問</a>第二十三<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','物')">物</a>第八<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','欣')">欣</a>第二十一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','隱')">隱</a>第十九</td><td><a href="javascript:cmd('hiunn','焮')">焮</a>第二十四<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','迄')">迄</a>第九<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','元')">元</a>第二十二<small>(魂痕同用)</small></td><td><a href="javascript:cmd('hiunn','阮')">阮</a>第二十<small>(混很同用)</small></td><td><a href="javascript:cmd('hiunn','願')">願</a>第二十五<small>(慁恨同用)</small></td><td><a href="javascript:cmd('hiunn','月')">月</a>第十<small>(沒同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','魂')">魂</a>第二十三</td><td><a href="javascript:cmd('hiunn','混')">混</a>第二十一</td><td><a href="javascript:cmd('hiunn','慁')">慁</a>第二十六</td><td><a href="javascript:cmd('hiunn','沒')">沒</a>第十一</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','痕')">痕</a>第二十四</td><td><a href="javascript:cmd('hiunn','很')">很</a>第二十二</td><td><a href="javascript:cmd('hiunn','恨')">恨</a>第二十七</td><td><small>(麧字見沒韻)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','寒')">寒</a>第二十五<small>(寒同用)</small></td><td><a href="javascript:cmd('hiunn','旱')">旱</a>第二十三<small>(緩同用)</small></td><td><a href="javascript:cmd('hiunn','翰')">翰</a>第二十八<small>(換同用)</small></td><td><a href="javascript:cmd('hiunn','曷')">曷</a>第十二<small>(末同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','桓')">桓</a>第二十六</td><td><a href="javascript:cmd('hiunn','緩')">緩</a>第二十四</td><td><a href="javascript:cmd('hiunn','換')">換</a>第二十九</td><td><a href="javascript:cmd('hiunn','末')">末</a>第十三</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','刪')">刪</a>第二十七<small>(山同用)</small></td><td><a href="javascript:cmd('hiunn','潸')">潸</a>第二十五<small>(産同用)</small></td><td><a href="javascript:cmd('hiunn','諫')">諫</a>第三十<small>(襉同用)</small></td><td><a href="javascript:cmd('hiunn','鎋')">鎋</a>第十五</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','山')">山</a>第二十八</td><td><a href="javascript:cmd('hiunn','産')">産</a>第二十六</td><td><a href="javascript:cmd('hiunn','襉')">襉</a>第三十一</td><td><a href="javascript:cmd('hiunn','黠')">黠</a>第十四<small>(鎋同用)</small></td></tr>
 <tr><th>下平聲</th><th>上聲</th><th>去聲</th><th>入聲</th></tr>
-<tr><td><a href="#seek.hiunn('先')">先</a>第一<small>(仙同用)</small></td><td><a href="#seek.hiunn('銑')">銑</a>第二十七<small>(獮同用)</small></td><td><a href="#seek.hiunn('霰')">霰</a>第三十二<small>(線同用)</small></td><td><a href="#seek.hiunn('屑')">屑</a>第十六<small>(薛同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('仙')">仙</a>第二</td><td><a href="#seek.hiunn('獮')">獮</a>第二十八</td><td><a href="#seek.hiunn('線')">線</a>第三十三</td><td><a href="#seek.hiunn('薛')">薛</a>第十七</td></tr>
-<tr><td><a href="#seek.hiunn('蕭')">蕭</a>第三<small>(宵同用)</small></td><td><a href="#seek.hiunn('篠')">篠</a>第二十九<small>(小同用)</small></td><td><a href="#seek.hiunn('嘯')">嘯</a>第三十四<small>(笑同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('宵')">宵</a>第四</td><td><a href="#seek.hiunn('小')">小</a>第三十</td><td><a href="#seek.hiunn('笑')">笑</a>第三十五</td><td/></tr>
-<tr><td><a href="#seek.hiunn('肴')">肴</a>第五<small>(獨用)</small></td><td><a href="#seek.hiunn('巧')">巧</a>第三十一<small>(獨用)</small></td><td><a href="#seek.hiunn('效')">效</a>第三十六<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('豪')">豪</a>第六<small>(獨用)</small></td><td><a href="#seek.hiunn('晧')">晧</a>第三十二<small>(獨用)</small></td><td><a href="#seek.hiunn('号')">号</a>第三十七<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('歌')">歌</a>第七<small>(戈同用)</small></td><td><a href="#seek.hiunn('哿')">哿</a>第三十三<small>(果同用)</small></td><td><a href="#seek.hiunn('箇')">箇</a>第三十八<small>(過同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('第')">第</a>八</td><td><a href="#seek.hiunn('果')">果</a>第三十四</td><td><a href="#seek.hiunn('過')">過</a>第三十九</td><td/></tr>
-<tr><td><a href="#seek.hiunn('麻')">麻</a>第九<small>(獨用)</small></td><td><a href="#seek.hiunn('馬')">馬</a>第三十五<small>(獨用)</small></td><td><a href="#seek.hiunn('禡')">禡</a>第四十<small>(獨用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('陽')">陽</a>第十<small>(唐同用)</small></td><td><a href="#seek.hiunn('養')">養</a>第三十六<small>(蕩同用)</small></td><td><a href="#seek.hiunn('漾')">漾</a>第四十一<small>(宕同用)</small></td><td><a href="#seek.hiunn('藥')">藥</a>第十八<small>(鐸同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('唐')">唐</a>第十一</td><td><a href="#seek.hiunn('蕩')">蕩</a>第三十七</td><td><a href="#seek.hiunn('宕')">宕</a>第四十二</td><td><a href="#seek.hiunn('鐸')">鐸</a>第十九</td></tr>
-<tr><td><a href="#seek.hiunn('庚')">庚</a>第十二<small>(耕淸同用)</small></td><td><a href="#seek.hiunn('梗')">梗</a>第三十八<small>(耿靜同用)</small></td><td><a href="#seek.hiunn('映')">映</a>第四十三<small>(諍勁同用)</small></td><td><a href="#seek.hiunn('陌')">陌</a>第二十<small>(麥昔同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('耕')">耕</a>第十三</td><td><a href="#seek.hiunn('耿')">耿</a>第三十九</td><td><a href="#seek.hiunn('諍')">諍</a>第四十四</td><td><a href="#seek.hiunn('麥')">麥</a>第二十一</td></tr>
-<tr><td><a href="#seek.hiunn('淸')">淸</a>第十四</td><td><a href="#seek.hiunn('靜')">靜</a>第四十</td><td><a href="#seek.hiunn('勁')">勁</a>第四十五</td><td><a href="#seek.hiunn('昔')">昔</a>第二十二</td></tr>
-<tr><td><a href="#seek.hiunn('靑')">靑</a>第十五<small>(獨用)</small></td><td><a href="#seek.hiunn('迥')">迥</a>第四十一<small>(獨用)</small></td><td><a href="#seek.hiunn('徑')">徑</a>第四十六<small>(獨用)</small></td><td><a href="#seek.hiunn('錫')">錫</a>第二十三<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('蒸')">蒸</a>第十六<small>(登同用)</small></td><td><a href="#seek.hiunn('拯')">拯</a>第四十二<small>(等同用)</small></td><td><a href="#seek.hiunn('證')">證</a>第四十七<small>(嶝同用)</small></td><td><a href="#seek.hiunn('職')">職</a>第二十四<small>(德同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('登')">登</a>第十七</td><td><a href="#seek.hiunn('等')">等</a>第四十三</td><td><a href="#seek.hiunn('嶝')">嶝</a>第四十八</td><td><a href="#seek.hiunn('德')">德</a>第二十五</td></tr>
-<tr><td><a href="#seek.hiunn('尤')">尤</a>第十八<small>(侯幽同用)</small></td><td><a href="#seek.hiunn('有')">有</a>第四十四<small>(厚黝同用)</small></td><td><a href="#seek.hiunn('宥')">宥</a>第四十九<small>(候幼同用)</small></td><td/></tr>
-<tr><td><a href="#seek.hiunn('侯')">侯</a>第十九</td><td><a href="#seek.hiunn('厚')">厚</a>第四十五</td><td><a href="#seek.hiunn('候')">候</a>第五十</td><td/></tr>
-<tr><td><a href="#seek.hiunn('幽')">幽</a>第二十</td><td><a href="#seek.hiunn('黝')">黝</a>第四十六</td><td><a href="#seek.hiunn('幼')">幼</a>第五十一</td><td/></tr>
-<tr><td><a href="#seek.hiunn('侵')">侵</a>第二十一<small>(獨用)</small></td><td><a href="#seek.hiunn('寑')">寑</a>第四十七<small>(獨用)</small></td><td><a href="#seek.hiunn('沁')">沁</a>第五十二<small>(獨用)</small></td><td><a href="#seek.hiunn('緝')">緝</a>第二十六<small>(獨用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('覃')">覃</a>第二十二<small>(談同用)</small></td><td><a href="#seek.hiunn('感')">感</a>第四十八<small>(敢同用)</small></td><td><a href="#seek.hiunn('勘')">勘</a>第五十三<small>(闞同用)</small></td><td><a href="#seek.hiunn('合')">合</a>第二十七<small>(盍同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('談')">談</a>第二十三</td><td><a href="#seek.hiunn('敢')">敢</a>第四十九</td><td><a href="#seek.hiunn('闞')">闞</a>第五十四</td><td><a href="#seek.hiunn('盍')">盍</a>第二十八</td></tr>
-<tr><td><a href="#seek.hiunn('鹽')">鹽</a>第二十四<small>(添同用)</small></td><td><a href="#seek.hiunn('琰')">琰</a>第五十<small>(忝儼同用)</small></td><td><a href="#seek.hiunn('豔')">豔</a>第五十五<small>(㮇釅同用)</small></td><td><a href="#seek.hiunn('葉')">葉</a>第二十九<small>(怗同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('添')">添</a>第二十五</td><td><a href="#seek.hiunn('忝')">忝</a>第五十一</td><td><a href="#seek.hiunn('㮇')">㮇</a>第五十六</td><td><a href="#seek.hiunn('怗')">怗</a>第三十</td></tr>
-<tr><td><a href="#seek.hiunn('咸')">咸</a>第二十六<small>(銜同用)</small></td><td><a href="#seek.hiunn('豏')">豏</a>第五十三<small>(檻范同用)</small></td><td><a href="#seek.hiunn('陷')">陷</a>第五十八<small>(鑑梵同用)</small></td><td><a href="#seek.hiunn('洽')">洽</a>第三十一<small>(狎同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('銜')">銜</a>第二十七</td><td><a href="#seek.hiunn('檻')">檻</a>第五十四</td><td><a href="#seek.hiunn('鑑')">鑑</a>第五十九</td><td><a href="#seek.hiunn('狎')">狎</a>第三十二</td></tr>
-<tr><td><a href="#seek.hiunn('嚴')">嚴</a>第二十八<small>(凡同用)</small></td><td><a href="#seek.hiunn('儼')">儼</a>第五十二</td><td><a href="#seek.hiunn('釅')">釅</a>第五十七</td><td><a href="#seek.hiunn('業')">業</a>第三十三<small>(乏同用)</small></td></tr>
-<tr><td><a href="#seek.hiunn('凡')">凡</a>第二十九</td><td><a href="#seek.hiunn('范')">范</a>第五十五</td><td><a href="#seek.hiunn('梵')">梵</a>第六十</td><td><a href="#seek.hiunn('乏')">乏</a>第三十四</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','先')">先</a>第一<small>(仙同用)</small></td><td><a href="javascript:cmd('hiunn','銑')">銑</a>第二十七<small>(獮同用)</small></td><td><a href="javascript:cmd('hiunn','霰')">霰</a>第三十二<small>(線同用)</small></td><td><a href="javascript:cmd('hiunn','屑')">屑</a>第十六<small>(薛同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','仙')">仙</a>第二</td><td><a href="javascript:cmd('hiunn','獮')">獮</a>第二十八</td><td><a href="javascript:cmd('hiunn','線')">線</a>第三十三</td><td><a href="javascript:cmd('hiunn','薛')">薛</a>第十七</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','蕭')">蕭</a>第三<small>(宵同用)</small></td><td><a href="javascript:cmd('hiunn','篠')">篠</a>第二十九<small>(小同用)</small></td><td><a href="javascript:cmd('hiunn','嘯')">嘯</a>第三十四<small>(笑同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','宵')">宵</a>第四</td><td><a href="javascript:cmd('hiunn','小')">小</a>第三十</td><td><a href="javascript:cmd('hiunn','笑')">笑</a>第三十五</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','肴')">肴</a>第五<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','巧')">巧</a>第三十一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','效')">效</a>第三十六<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','豪')">豪</a>第六<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','晧')">晧</a>第三十二<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','号')">号</a>第三十七<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','歌')">歌</a>第七<small>(戈同用)</small></td><td><a href="javascript:cmd('hiunn','哿')">哿</a>第三十三<small>(果同用)</small></td><td><a href="javascript:cmd('hiunn','箇')">箇</a>第三十八<small>(過同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','第')">第</a>八</td><td><a href="javascript:cmd('hiunn','果')">果</a>第三十四</td><td><a href="javascript:cmd('hiunn','過')">過</a>第三十九</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','麻')">麻</a>第九<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','馬')">馬</a>第三十五<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','禡')">禡</a>第四十<small>(獨用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','陽')">陽</a>第十<small>(唐同用)</small></td><td><a href="javascript:cmd('hiunn','養')">養</a>第三十六<small>(蕩同用)</small></td><td><a href="javascript:cmd('hiunn','漾')">漾</a>第四十一<small>(宕同用)</small></td><td><a href="javascript:cmd('hiunn','藥')">藥</a>第十八<small>(鐸同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','唐')">唐</a>第十一</td><td><a href="javascript:cmd('hiunn','蕩')">蕩</a>第三十七</td><td><a href="javascript:cmd('hiunn','宕')">宕</a>第四十二</td><td><a href="javascript:cmd('hiunn','鐸')">鐸</a>第十九</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','庚')">庚</a>第十二<small>(耕淸同用)</small></td><td><a href="javascript:cmd('hiunn','梗')">梗</a>第三十八<small>(耿靜同用)</small></td><td><a href="javascript:cmd('hiunn','映')">映</a>第四十三<small>(諍勁同用)</small></td><td><a href="javascript:cmd('hiunn','陌')">陌</a>第二十<small>(麥昔同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','耕')">耕</a>第十三</td><td><a href="javascript:cmd('hiunn','耿')">耿</a>第三十九</td><td><a href="javascript:cmd('hiunn','諍')">諍</a>第四十四</td><td><a href="javascript:cmd('hiunn','麥')">麥</a>第二十一</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','淸')">淸</a>第十四</td><td><a href="javascript:cmd('hiunn','靜')">靜</a>第四十</td><td><a href="javascript:cmd('hiunn','勁')">勁</a>第四十五</td><td><a href="javascript:cmd('hiunn','昔')">昔</a>第二十二</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','靑')">靑</a>第十五<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','迥')">迥</a>第四十一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','徑')">徑</a>第四十六<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','錫')">錫</a>第二十三<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','蒸')">蒸</a>第十六<small>(登同用)</small></td><td><a href="javascript:cmd('hiunn','拯')">拯</a>第四十二<small>(等同用)</small></td><td><a href="javascript:cmd('hiunn','證')">證</a>第四十七<small>(嶝同用)</small></td><td><a href="javascript:cmd('hiunn','職')">職</a>第二十四<small>(德同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','登')">登</a>第十七</td><td><a href="javascript:cmd('hiunn','等')">等</a>第四十三</td><td><a href="javascript:cmd('hiunn','嶝')">嶝</a>第四十八</td><td><a href="javascript:cmd('hiunn','德')">德</a>第二十五</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','尤')">尤</a>第十八<small>(侯幽同用)</small></td><td><a href="javascript:cmd('hiunn','有')">有</a>第四十四<small>(厚黝同用)</small></td><td><a href="javascript:cmd('hiunn','宥')">宥</a>第四十九<small>(候幼同用)</small></td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','侯')">侯</a>第十九</td><td><a href="javascript:cmd('hiunn','厚')">厚</a>第四十五</td><td><a href="javascript:cmd('hiunn','候')">候</a>第五十</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','幽')">幽</a>第二十</td><td><a href="javascript:cmd('hiunn','黝')">黝</a>第四十六</td><td><a href="javascript:cmd('hiunn','幼')">幼</a>第五十一</td><td/></tr>
+<tr><td><a href="javascript:cmd('hiunn','侵')">侵</a>第二十一<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','寑')">寑</a>第四十七<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','沁')">沁</a>第五十二<small>(獨用)</small></td><td><a href="javascript:cmd('hiunn','緝')">緝</a>第二十六<small>(獨用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','覃')">覃</a>第二十二<small>(談同用)</small></td><td><a href="javascript:cmd('hiunn','感')">感</a>第四十八<small>(敢同用)</small></td><td><a href="javascript:cmd('hiunn','勘')">勘</a>第五十三<small>(闞同用)</small></td><td><a href="javascript:cmd('hiunn','合')">合</a>第二十七<small>(盍同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','談')">談</a>第二十三</td><td><a href="javascript:cmd('hiunn','敢')">敢</a>第四十九</td><td><a href="javascript:cmd('hiunn','闞')">闞</a>第五十四</td><td><a href="javascript:cmd('hiunn','盍')">盍</a>第二十八</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','鹽')">鹽</a>第二十四<small>(添同用)</small></td><td><a href="javascript:cmd('hiunn','琰')">琰</a>第五十<small>(忝儼同用)</small></td><td><a href="javascript:cmd('hiunn','豔')">豔</a>第五十五<small>(㮇釅同用)</small></td><td><a href="javascript:cmd('hiunn','葉')">葉</a>第二十九<small>(怗同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','添')">添</a>第二十五</td><td><a href="javascript:cmd('hiunn','忝')">忝</a>第五十一</td><td><a href="javascript:cmd('hiunn','㮇')">㮇</a>第五十六</td><td><a href="javascript:cmd('hiunn','怗')">怗</a>第三十</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','咸')">咸</a>第二十六<small>(銜同用)</small></td><td><a href="javascript:cmd('hiunn','豏')">豏</a>第五十三<small>(檻范同用)</small></td><td><a href="javascript:cmd('hiunn','陷')">陷</a>第五十八<small>(鑑梵同用)</small></td><td><a href="javascript:cmd('hiunn','洽')">洽</a>第三十一<small>(狎同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','銜')">銜</a>第二十七</td><td><a href="javascript:cmd('hiunn','檻')">檻</a>第五十四</td><td><a href="javascript:cmd('hiunn','鑑')">鑑</a>第五十九</td><td><a href="javascript:cmd('hiunn','狎')">狎</a>第三十二</td></tr>
+<tr><td><a href="javascript:cmd('hiunn','嚴')">嚴</a>第二十八<small>(凡同用)</small></td><td><a href="javascript:cmd('hiunn','儼')">儼</a>第五十二</td><td><a href="javascript:cmd('hiunn','釅')">釅</a>第五十七</td><td><a href="javascript:cmd('hiunn','業')">業</a>第三十三<small>(乏同用)</small></td></tr>
+<tr><td><a href="javascript:cmd('hiunn','凡')">凡</a>第二十九</td><td><a href="javascript:cmd('hiunn','范')">范</a>第五十五</td><td><a href="javascript:cmd('hiunn','梵')">梵</a>第六十</td><td><a href="javascript:cmd('hiunn','乏')">乏</a>第三十四</td></tr>
 </tbody>
 </table>
 
