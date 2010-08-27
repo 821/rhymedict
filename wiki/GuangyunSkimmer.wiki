@@ -1,7 +1,9 @@
 #summary Help information of GuangyunSkimmer
 
+
 = 廣韻檢索 =
 
+[http://rhymedict.googlecode.com/svn/trunk/guangyun_skimmer/index.html 在線瀏覽]
 == 簡介 ==
 這是一個適於在本地計算機上使用的網頁程序。用web瀏覽器（如Firefox,IE）打開程序主頁面，可以通過字、反切檢索《廣韻》辭條，瀏覽韻目、小韻，以及查看聲、韻和字音的圖表。
 
