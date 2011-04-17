@@ -2,10 +2,14 @@
 = 廣韻數據表 =
 == Introduction ==
 
-Those are tables organized in relational database (RDBMS) style. You can't either get the copy in sqlite format from the [http://code.google.com/p/rhymedict/downloads/list download_page], or browser them online at google's fusion tables lab:
+Those are tables organized in relational database (RDBMS) style. You can either get the copy in sqlite format from the [http://code.google.com/p/rhymedict/downloads/list download_page], or browse them online at google's fusion tables lab:
+
 [http://www.google.com/fusiontables/DataSource?dsrcid=198256 聲母]
+
 [http://www.google.com/fusiontables/DataSource?dsrcid=199105 韻母]
+
 [http://www.google.com/fusiontables/DataSource?dsrcid=197582 字音]
+
 [http://www.google.com/fusiontables/DataSource?dsrcid=198330 辭條]
 
 
