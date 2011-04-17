@@ -17,4 +17,4 @@ Those are tables organized in relational database (RDBMS) style. You can either 
 
 == The diagram below shows the relationship between these tables ==
 
-http://s13.sinaimg.cn/orignal/6d1823bbha11bd518f72c&690&nonsense=guangyun_tables.png
+http://pknguw.blu.livefilestore.com/y1p2fciAMfHPwRX191FTVw3iajwGyfCEGyTa7jdqZ293kNIR_XIMpFXJ5Q7KXQVAy1j6d3-r0__Sm2N3tDA6mg9LLl0jt48TmtB/kuankhiunn.png
