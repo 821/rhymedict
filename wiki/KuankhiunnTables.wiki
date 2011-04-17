@@ -16,3 +16,5 @@ Those are tables organized in relational database (RDBMS) style. You can either 
 
 
 == The diagram below shows the relationship between these tables ==
+
+http://s13.sinaimg.cn/orignal/6d1823bbha11bd518f72c&690
