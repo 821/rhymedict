@@ -35,3 +35,4 @@
 You can report bugs [http://code.google.com/p/rhymedict/issues/list Here]
 == 其他 ==
 [guangyun_odds_ends 廣韻拾零]
+[KuankhiunnTables 廣韻數據表]
